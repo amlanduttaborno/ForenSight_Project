@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Nav } from "@/components/nav";
 import { Providers } from "@/components/providers";
+import { PreferencesProvider } from "@/components/preferences";
 
 export const metadata: Metadata = {
   title: "ForenSight — Initial Demo",
@@ -12,12 +13,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <Providers>
-          <div className="min-h-screen md:flex">
-            <Nav />
-            <main className="min-w-0 flex-1">{children}</main>
-          </div>
-        </Providers>
+        <PreferencesProvider>
+          <Providers>
+            <div className="min-h-screen md:flex">
+              <Nav />
+              <main className="min-w-0 flex-1">{children}</main>
+            </div>
+          </Providers>
+        </PreferencesProvider>
       </body>
     </html>
   );

@@ -10,17 +10,17 @@ def build_demo_report(path: Path, *, analysis, regions: list[dict]) -> None:
     y = page_h - 48
 
     c.setFont("Helvetica-Bold", 18)
-    c.drawString(48, y, "ForenSight — Preliminary Forensic Demo Report")
+    c.drawString(48, y, "ForenSight - Trained Forensic Analysis Report")
     y -= 28
     c.setFont("Helvetica", 9)
-    c.drawString(48, y, "DEMO / PRELIMINARY — not a validated final AI authenticity report")
+    c.drawString(48, y, "TRAINED MULTIMODAL MODEL - results are not a legal determination")
     y -= 30
 
     fields = [
         ("Analysis ID", analysis.id),
         ("Filename", analysis.filename),
         ("Verdict", analysis.verdict),
-        ("Preliminary evidence score", f"{analysis.preliminary_score:.4f}"),
+        ("Manipulation probability", f"{analysis.preliminary_score:.4f}"),
         ("Highlighted area", f"{analysis.manipulated_area_pct:.2f}%"),
         ("Suspicious regions", str(analysis.region_count)),
         ("Caption provided", "Yes" if analysis.caption else "No"),
@@ -53,7 +53,7 @@ def build_demo_report(path: Path, *, analysis, regions: list[dict]) -> None:
     y -= 20
     c.setFont("Helvetica", 9)
     if not regions:
-        c.drawString(48, y, "No connected high-evidence region passed the demo size filter.")
+        c.drawString(48, y, "No connected high-evidence region passed the model size filter.")
     else:
         for r in regions[:8]:
             c.drawString(

@@ -12,7 +12,7 @@ def create_analysis_dir() -> tuple[str, Path]:
 
 
 def safe_artifact_path(analysis_dir: Path, name: str) -> Path:
-    allowed = {"original.jpg", "overlay.jpg", "mask.png", "heatmap.png", "report.pdf"}
+    allowed = {"original.jpg", "overlay.jpg", "mask.png", "heatmap.png", "probability_map.png", "probability_map.npy", "gradcam.jpg", "report.pdf"}
     if name not in allowed:
         raise ValueError("Unsupported artifact")
     return analysis_dir / name

@@ -1,0 +1,68 @@
+{
+  "classification_row_level": {
+    "accuracy": 0.9471276054905948,
+    "balanced_accuracy": 0.9599082721032489,
+    "precision": 0.9954427083333334,
+    "recall": 0.9403444034440345,
+    "specificity": 0.9794721407624634,
+    "f1": 0.9671094244149273,
+    "roc_auc": 0.9879613898778283,
+    "average_precision": 0.9974487869262951,
+    "brier": 0.030214027795703067,
+    "threshold": 0.9166862884105499,
+    "tn": 334,
+    "fp": 7,
+    "fn": 97,
+    "tp": 1529,
+    "ece_10_bins": 0.027673321984206127
+  },
+  "classification_source_balanced": {
+    "accuracy": 0.9581239530988275,
+    "balanced_accuracy": 0.9545798203812317,
+    "precision": 0.9714285714285714,
+    "recall": 0.9296875,
+    "specificity": 0.9794721407624634,
+    "f1": 0.9500998003992016,
+    "roc_auc": 0.9906524926686218,
+    "average_precision": 0.9887803022103075,
+    "brier": 0.03247131461964132,
+    "threshold": 0.9166862884105499,
+    "tn": 334,
+    "fp": 7,
+    "fn": 18,
+    "tp": 238,
+    "ece_10_bins": 0.02694854754433436
+  },
+  "localization": {
+    "dice": 0.9236162836437805,
+    "iou": 0.8580734450075218,
+    "pixel_precision": 0.9146554287077576,
+    "pixel_recall": 0.9327544542522381,
+    "authentic_false_positive_area_rate": 0.012531100285872841,
+    "mask_threshold": 0.55
+  },
+  "localization_by_jpeg_quality": {
+    "75": {
+      "dice": 0.9088237934647379,
+      "iou": 0.8328845405733915,
+      "pixel_precision": 0.9095418714446395,
+      "pixel_recall": 0.9081068484271031
+    },
+    "90": {
+      "dice": 0.9209668285138871,
+      "iou": 0.853511136497753,
+      "pixel_precision": 0.9127574344789465,
+      "pixel_recall": 0.9293252343147209
+    },
+    "100": {
+      "dice": 0.9407049940142398,
+      "iou": 0.8880481723208327,
+      "pixel_precision": 0.9214045691970151,
+      "pixel_recall": 0.9608312800148903
+    }
+  },
+  "temperature": 1.5229824865261021,
+  "classification_threshold": 0.9166862884105499,
+  "mask_threshold": 0.55,
+  "checkpoint": "D:\\Primary Store\\thesis\\forensight_final\\outputs\\checkpoints\\best.pt"
+}

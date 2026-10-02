@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "image_size": 384,
+  "batch_size": 2,
+  "accum_steps": 4,
+  "epochs": 30,
+  "rgb_backbone": "convnext_tiny.fb_in22k_ft_in1k_384",
+  "clip_name": "openai/clip-vit-base-patch32",
+  "manifest_path": "D:\\Primary Store\\thesis\\forensight_final\\autosplice_manifest_v2.csv",
+  "loss_weights": {
+    "classification": 0.4,
+    "seg_focal": 0.2,
+    "seg_dice": 0.25,
+    "consistency": 0.15
+  }
+}

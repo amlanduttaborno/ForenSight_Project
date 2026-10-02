@@ -9,9 +9,18 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///./forensight_demo.db"
     storage_dir: str = "./storage"
     max_upload_mb: int = 12
-    demo_mode: bool = True
+    initial_token_balance: int = 1000
+    verification_token_cost: int = 10
+    demo_mode: bool = False
     model_checkpoint: str = "./checkpoints/best.pt"
+    model_device: str = "auto"
     redis_url: str = "redis://localhost:6379/0"
+    auth_session_days: int = 14
+    admin_email: str = "admin@forensight.local"
+    admin_password: str = ""
+    payment_mode: str = "dummy"
+    bkash_enabled: bool = False
+    nagad_enabled: bool = False
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 

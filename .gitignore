@@ -1,5 +1,8 @@
 .venv/
 **/.venv/
+.venv-trained/
+**/.venv-trained/
+**/.venv*/
 __pycache__/
 *.py[cod]
 node_modules/
@@ -9,3 +12,15 @@ build/
 .env
 .env.*
 !.env.example
+**/checkpoints/*.pt
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+**/backend/storage/
+**/validation_data/
+**/datasets/
+*.tsbuildinfo
+github-upload/
+github-upload-incomplete/
+!.env.local.example

@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Optional
 from pydantic import BaseModel, Field
 
 
@@ -17,12 +18,14 @@ class ArtifactLinks(BaseModel):
     overlay: str
     mask: str
     heatmap: str
+    probability_map: str
     report: str
 
 
 class AnalysisResponse(BaseModel):
     id: str
     filename: str
+    image_hash: str
     verdict: str
     preliminary_score: float = Field(ge=0, le=1)
     manipulated_area_pct: float
@@ -33,6 +36,9 @@ class AnalysisResponse(BaseModel):
     caption_provided: bool
     multimodal_status: str
     model_status: str
+    model_version: str
+    consistency_score: Optional[float] = None
+    clip_similarity: Optional[float] = None
     warning: str
     regions: list[Region]
     artifacts: ArtifactLinks
